@@ -7,19 +7,17 @@ Inside of the project there are 2 folders. The **client** and the **library** (p
 
 The project has a Makefile that allows you to do the following actions:
 
-1.  In **library** run the command `make go-init` to install all the dependencies
-2.  In **client** run the command `make go-init` to install all the dependencies
+1.  Run the command `make init` to install all the dependencies for **client** and **library**
+2.  Then, run `make run` to start the server
 
-    a. Then, run `make run` to start the server
-
-    b. Once the server started, in a Postman or browser client, send a request like:
+    a. Once the server started, in a Postman or browser client, send a request like:
     `localhost:10000/validate/{setup}` where **{setup}** is the configuration that wants to be validated.
 
 Example: `localhost:10000/validate/[{()}{[()()]}{[()]}]`
 
 ## Test
 
-In library run the command `make test`
+Run the command `make test`
 
     go test -v -cover
     === RUN   TestValidateSetup
@@ -41,4 +39,3 @@ In library run the command `make test`
     PASS
     coverage: 100.0% of statements
     ok      spark/challenge/portainer       0.444s
-
